@@ -1,3 +1,3 @@
-# Vfig
+# VFIG
 
-This is the repository that contains source code for the [Vfig website](https://vfig-proj.github.io).
+This is the repository that contains source code for the [VIG website](https://vfig-proj.github.io).
