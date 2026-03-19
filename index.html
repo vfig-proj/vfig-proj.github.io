@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="A Benchmark to Evaluate Tool-Use for multi-step multi-modal Tasks">
+        content="Vectorizing Complex Figures in SVG with Vision-Language Models">
   <meta name="keywords" content="m&ms, LLM agents, tool-use">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>m&ms</title>
+  <title>VFIG</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -22,7 +22,7 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link rel="icon" href="./static/images/mnms_green_single.png">
+  <link rel="icon" href="./static/images/fig.png">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -53,82 +53,51 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://github.com/RAIVNLab/CREPE">
-            CREPE
-          </a>
-          <a class="navbar-item" href="https://github.com/RAIVNLab/sugar-crepe">
-            SugarCREPE
-          </a>
-          <a class="navbar-item" href="https://arxiv.org/pdf/2303.02884.pdf">
-            ModelSketching
-          </a>
-          <a class="navbar-item" href="https://github.com/StanfordVL/alignment">
-            ELIGN
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
 
 
 <section class="hero">
-  <div class="hero-body">
+  <div class="hero-body" style="padding-bottom: 2rem;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           
 
             <h1 class="title is-1 publication-title is-bold">
-              <img src="./static/images/mnms_green_single.png" style="width:1em;vertical-align: middle" alt="Logo">
-              <span  style="vertical-align: middle">m&ms</span>
+              <img src="./static/images/fig.png" style="width:1em;vertical-align: middle" alt="Logo">
+              <span  style="vertical-align: middle">VFIG</span>
             </h1>
 
             <h2 class="subtitle is-3 publication-subtitle">
-              Evaluating Tool-Use for <i>m</i>ulti-step <i>m</i>ulti-modal Tasks
+              Vectorizing Complex Figures in SVG with Vision-Language Models
             </h2>
              
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://zixianma.github.io">Zixian Ma</a><sup>1</sup>,</span>
+              <a href="https://qijia-he.github.io/">Qijia He</a><sup>*1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/weikaihuang">Weikai Huang</a><sup>1</sup>,</span>
+              <a href="https://www.linkedin.com/in/xunmei-liu/">Xunmei Liu</a><sup>*1</sup>,</span>
             <span class="author-block">
-              <a href="https://jieyuz2.github.io">Jieyu Zhang</a><sup>1</sup>,
-            </span>
+              <a href="https://www.linkedin.com/in/hammaad-memon/">Hammaad Memon</a><sup>*1</sup>,</span>
             <span class="author-block">
-              <a href="http://tanmaygupta.info">Tanmay Gupta</a><sup>2</sup>,
-            </span>
+              <a href="https://www.linkedin.com/in/li-ziang-134422392/">Ziang Li</a><sup>*1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.ranjaykrishna.com/index.html">Ranjay Krishna</a><sup>1,2</sup>,
-            </span>
+              <a href="https://zixianma.github.io">Zixian Ma</a><sup>*1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://j-min.io/">Jaemin Cho</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jason718.github.io/">Zhongzheng Ren</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://danweld.com/">Dan Weld</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.ranjaykrishna.com/index.html">Ranjay Krishna</a><sup>&Dagger;1,2</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
+            <span class="author-block"><sup>1</sup>University of Washington,&nbsp;</span>
             <span class="author-block"><sup>2</sup>Allen Institute for AI</span>
+          </div>
+          <div class="is-size-6 publication-authors" style="margin-top:0.4em;">
+            <span class="author-block"><sup>*</sup>Equal contribution&nbsp;&nbsp;<sup>&Dagger;</sup>Corresponding author</span>
           </div>
 
           <div class="column has-text-centered">
@@ -144,7 +113,7 @@
                 </a>
               </span> -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2403.11085"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -164,7 +133,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/RAIVNLab/mnms"
+                <a href="https://github.com/RAIVNLab/VFig"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -174,7 +143,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/zixianma/mnms"
+                <a href="https://huggingface.co/collections/QijiaHe/vfig"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <p style="font-size:18px">🤗</p>
@@ -193,18 +162,17 @@
 
 <section class="hero">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video autoplay muted loop height="100%">
-        <source src="./static/videos/mnms_video_hd.mp4"
-                type="video/mp4">
-      </video>
-      
+    <div class="hero-body" style="padding-top: 2rem; padding-bottom: 2rem;">
+      <img src="./static/images/teaser.png" alt="Teaser" style="width:100%;">
+      <p class="has-text-centered" style="margin-top:1em;">
+        <b>Overview of <img src="./static/images/fig.png" style="width:1em;vertical-align: middle" alt="Logo"> VFIG.</b> Given complex raster images (top row) as input, VFIG generates editable, high-fidelity SVG code (pink box). Rendering the generated SVG (bottom row) produces outputs nearly indistinguishable from the inputs.
+      </p>
     </div>
   </div>
 </section>
 
 
-<section class="section">
+<section class="section" style="padding-top: 2rem;">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -212,22 +180,23 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Real-world multi-modal problems are rarely solved by a single machine learning model, 
-            and often require multi-step computational plans that involve stitching several models. 
-            Tool-augmented LLMs hold tremendous promise for automating the generation of such 
-            computational plans. However, the lack of standardized benchmarks for evaluating LLMs as 
-            planners for multi-step multi-modal tasks has prevented a systematic study of planner 
-            design decisions. Should LLMs generate a full plan in a single shot or step-by-step? 
-            Should they invoke tools directly with Python code or through structured data formats 
-            like JSON? Does feedback improve planning? 
-          </p>
-          <p>
-            To answer these questions and more, we introduce m&m's: 
-            a benchmark containing 4K+ multi-step multi-modal tasks involving 33 tools that 
-            include multi-modal ML models, (free) public APIs, and image processing modules. 
-            For each of these task queries, we provide automatically generated plans using 
-            this realistic toolset. We further provide a high-quality subset of 1,565 task 
-            plans that are human-verified and correctly executable. 
+            Scalable Vector Graphics (SVG) are an essential format for technical illustration and digital design,
+            offering precise resolution independence and flexible semantic editability. In practice, however,
+            original vector source files are frequently lost or inaccessible, leaving only &ldquo;flat&rdquo;
+            rasterized versions (e.g., PNG or JPEG) that are difficult to modify or scale. Manually reconstructing
+            these figures is a prohibitively labor-intensive process, requiring specialized expertise to recover the
+            original geometric intent. To bridge this gap, we propose VFIG, a family of Vision&ndash;Language Models
+            trained for complex and high-fidelity figure-to-SVG conversion. While this task is inherently
+            data-driven, existing datasets are typically small-scale and lack the complexity of professional
+            diagrams. We address this by introducing VFIG-DATA, a large-scale dataset of 66K high-quality
+            figure&ndash;SVG pairs, curated from a diverse mix of real-world paper figures and procedurally
+            generated diagrams. Recognizing that SVGs are composed of recurring primitives and hierarchical local
+            structures, we introduce a coarse-to-fine training curriculum that begins with supervised fine-tuning
+            (SFT) to learn atomic primitives and transitions to reinforcement learning (RL) refinement to optimize
+            global diagram fidelity, layout consistency, and topological edge cases. Finally, we introduce
+            VFIG-BENCH, a comprehensive evaluation suite with novel metrics designed to measure the structural
+            integrity of complex figures. VFIG achieves state-of-the-art performance among open-source models and
+            performs on par with GPT-5.2, achieving a VLM-Judge score of 0.829 on VFIG-BENCH.
           </p>
         </div>
       </div>
@@ -258,7 +227,7 @@
     <!-- <h1 class="title is-1 mathvista"><img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
     <h1 class="title is-1">
       <!-- <img src="static/images/mnms_green_single.png" style="width:1em;vertical-align: middle" alt="Logo" /> -->
-      <span style="vertical-align: middle">m&ms Dataset</span>
+      <span style="vertical-align: middle">VFIG Dataset</span>
     </h1>
   </div>
 </section>
@@ -268,138 +237,89 @@
     <div class="columns is-centered mt-3">
       <div class="column is-four-fifths has-text-centered content">
         <!-- <img src="static/videos/data_gen.gif"/> -->
-        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
+          <p>
+            We curate <b>VFIG-DATA</b>, a large-scale dataset of 66K rigorously filtered image–SVG pairs. Unlike prior SVG datasets that
+            focus predominantly on icons or decorative graphics, VFIG-DATA targets diagram-centric scientific figures.
+            <b>To our knowledge, it is the first dataset of this scale purpose-built for structured scientific figure generation.</b>
+          </p>
+
+          <h2 class="title is-3 has-text-centered">Dataset Examples</h2>
           <img src="./static/images/dataset_examples.png">
-      <h3 class="subtitle has-text-centered">
-        <!-- <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits. -->
-        m&ms contains a large quantity of diverse user queries involving three modalities 
-        (i.e. text, image, and audio) as well as human-verified plans that consist of 1 - 3
-        tools across three categories: multi-modal <span class="mnms-blue">machine learning models</span>, 
-        <span class="mnms-red">public APIs</span> and  <span class="mnms-yellow">image processing modules</span>.
-        
-      </h3>
-         
+          <p class="has-text-centered">
+            <b>Examples of VFIG-DATA and academic data.</b> We show the three sources: simple diagrams from academic datasets, complex diagram layouts, and a curated set of basic shapes and arrows to support structured SVG generation.
+          </p>
+
+          <h2 class="title is-3 has-text-centered">Generation Pipeline</h2>
+          <p>
+            Our pipeline covers three complementary data sources: (1) a <b>data generation pipeline</b> that produces
+            complex diagrams via a VLM-based describe-and-generate approach from crawled images; (2) a <b>rigorous
+            filtering procedure</b> to ensure quality and fidelity; and (3) <b>78K additional data points</b> from
+            existing academic SVG datasets, processed through the same filtering pipeline to improve generalization.
+            Together, these form a diverse and high-quality training mixture.
+          </p>
+          <img src="./static/images/dataset_gen.png">
+          <p class="has-text-centered">
+            <b>Data generation and filtering pipelines.</b> We show the data generation and filtering processes for curated academic figures, complex diagrams created through a VLM-based describe-and-generate pipeline from crawled images, and shapes and arrows produced by LLM-generated templates with randomized elements.
+          </p>
+
+          <h2 class="title is-3 has-text-centered">Training Mixture</h2>
           <div class="content has-text-centered">
             <img src="static/images/dataset_stats.png" alt="data-overview"
-              style="max-height: 50%; max-width: 50%;" />
+              style="max-height: 100%; max-width: 100%;" />
             <p>
-              Dataset statistics of m&ms.
+              <b>Summary of the training mixture.</b>
             </p>
           </div>
-          <p>
-            Overall, <img src="static/images/mnms_green_single.png" style="width:1.0em;vertical-align: middle"
-            alt="Logo" /> m&ms contains a large quantity of <b>diverse ecologically-valid task</b> queries.
-            Each task is associated with <b>human-verified and executable</b> plans. Concretely, there are a 
-            total of 4,427 raw examples in m&ms, where 1,565 have been verified to be correct by three human annotators. 
-            After additional filtering, we select a subset of 882 examples for evaluation.
-            m&ms tasks are <b>granular in difficulty</b> with 70 queries that require a single tool, 159 need two tools, 
-            and 653 need three tools. In terms of tools, there are <b>33 unique tools</b> in total across three different 
-            categories, of which 13 are multi-modal machine learning models on <a href="https://huggingface.co">HuggingFace</a>, 
-            11 are image processing modules from <a href="https://github.com/allenai/visprog">VisProg</a>, and 9 are free public 
-            APIs from <a href="https://rapidapi.com">RapidAPI</a>. Our final dataset includes 317 representative tool sequences
-            where each sequence consists of a mix of tools across categories and maps to multiple unique queries. 
-            See a summary of the dataset statistics above. 
-          </p>
-          <p>
-          You can download the different splits of the m&ms dataset via <a href="https://huggingface.co/datasets/zixianma/mnms" target="_blank">HuggingFace Dataset</a>.
-          </p>
-          
         </div>
       </div>
     </div>
 
-    <div class="columns is-centered m-3">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">More Examples</h2>
-        <p>We present additional examples of query-plan pairs in the m&ms dataset below:</p>
-          <div id="results-carousel" class="carousel results-carousel" >
-            <div class="box m-5 carousel-box">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/ex1.png" width="80%"/>
-                <p> Ex1. 2-tool Query and Plan</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/ex2.png" width="80%"/>
-                <p> Ex2. 2-tool Query and Plan</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/ex3.png" width="80%"/>
-                <p> Ex3. 2-tool Query and Plan</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/ex4.png" width="80%"/>
-                <p> Ex4. 2-tool Query and Plan</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/ex5.png" width="80%"/>
-                <p> Ex5. 3-tool Query and Plan</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/ex6.png" width="80%"/>
-                <p> Ex6. 3-tool Query and Plan</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/ex7.png" width="80%"/>
-                <p> Ex7. 3-tool Query and Plan</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/ex8.png" width="80%"/>
-                <p> Ex8. 3-tool Query and Plan</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/ex9.png" width="80%"/>
-                <p> Ex9. 3-tool Query and Plan</p>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
+  </div>
+</section>
 
-    <div class="columns is-centered m-3">
-      <div class="column is-four-fifths has-text-centered content">
-        <h2 class="title is-3">Tools</h2>
-        <p>In this section, you can find more details about the tools and their distributions in m&ms. </p>
-        <div class="container is-max-desktop">
-          <div class="content has-text-centered">
-            <img src="static/images/all_tools.png" alt="data-overview" style="max-width: 100%;" />
-            <p> A complete list of tools across three categories in the m&ms dataset.</p>
-          </div>
-          
-          
-          <div class="content has-text-centered">
-            <img src="static/images/tool_dist_before_and_after.png" alt="data-overview" style="max-width: 100%;" />
-            <p>
-              The distribution of tools before (blue) and after (red) data filtering. See more
-              details about the filtering in our <a href="https://arxiv.org/pdf/2403.11085.pdf">paper</a>. 
-              <!-- Concretely, we perform two types of data filtering on the 1,565 human-
-              verified examples: (1) we manually filter out 349 examples
-              with poor execution results, especially those where inter-
-              mediate tools return wrong or empty outputs (e.g. when
-              question answering is the second tool in the sequence and outputs an empty string); (2) we filter out
-              a total of 334 examples whose plans involve the most frequent tool - image
-              generation - and have more than 4 unique queries. -->
-            </p>
-          </div>
+<!-- VFIG MODEL SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1">
+      <span style="vertical-align: middle">VFIG Model</span>
+    </h1>
+  </div>
+</section>
+
+<!-- VFIG MODEL PIPELINE -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Pipeline flow: horizontal single line -->
+    <div style="display:flex; align-items:center; gap:0.8rem; width:100%;">
+      <!-- Input Figure -->
+      <div style="background:#f5f5f5; border:2px solid #ccc; border-radius:8px; padding:0.5rem 1rem; font-weight:600; font-size:0.9rem; white-space:nowrap; flex-shrink:0;">
+        Input Figure
+      </div>
+      <div style="font-size:1.3rem; color:#555; flex-shrink:0;">→</div>
+      <!-- SFT Card -->
+      <div style="border:2px solid #4a90d9; border-radius:12px; padding:1rem; flex:1; background:#fff; min-width:0;">
+        <div style="font-size:1rem; font-weight:700; margin-bottom:0.5rem; color:#4a90d9;">🧠 SFT Training</div>
+        <p style="margin-bottom:0.5rem; font-size:0.85rem;">Learns SVG syntax and structure from paired figure–SVG supervision.</p>
+        <div style="background:#f0f6ff; border-radius:6px; padding:0.3rem 0.6rem; font-family:monospace; font-size:0.75rem; margin-bottom:0.5rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+          L<sub>SFT</sub> = −𝔼 log p(y|x)
         </div>
+        <p style="color:#555; font-size:0.8rem;">Simple → complex curriculum</p>
+      </div>
+      <div style="font-size:1.3rem; color:#555; flex-shrink:0;">→</div>
+      <!-- RL Card -->
+      <div style="border:2px solid #e05c5c; border-radius:12px; padding:1rem; flex:1; background:#fff; min-width:0;">
+        <div style="font-size:1rem; font-weight:700; margin-bottom:0.5rem; color:#e05c5c;">🎯 Reinforcement Learning</div>
+        <p style="margin-bottom:0.5rem; font-size:0.85rem;">Improves visual fidelity using rewards on rendered SVG outputs.</p>
+        <div style="background:#fff5f5; border-radius:6px; padding:0.3rem 0.6rem; font-family:monospace; font-size:0.72rem; margin-bottom:0.5rem; white-space:nowrap;">
+          R = (Pres + Lay + Conn + Det) / 4
+        </div>
+        <p style="color:#555; font-size:0.8rem;">Presence &bull; Layout &bull; Connectivity &bull; Details</p>
+      </div>
+      <div style="font-size:1.3rem; color:#555; flex-shrink:0;">→</div>
+      <!-- Generated SVG -->
+      <div style="background:#f5f5f5; border:2px solid #ccc; border-radius:8px; padding:0.5rem 1rem; font-weight:600; font-size:0.9rem; white-space:nowrap; flex-shrink:0;">
+        Generated SVG
       </div>
     </div>
   </div>
@@ -436,124 +356,147 @@
     <div class="columns is-centered mt-3">
       <div class="column is-four-fifths has-text-centered content">
         
-        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
-          <p>
-            With m&m's, we evaluate 
-            6 popular LLMs with 2 planning strategies (multi-step vs. step-by-step planning), 
-            2 plan formats (JSON vs. code), and 3 types of feedback (parsing/verification
-            /execution). We highlight three key findings from our extensive experiments:
-            <ol>
-              <li>All planning agents perform better on tool selection with
-                multi-step planning than with step-by-step planning re-
-                gardless of the underlying LLMs' sizes;</li>
-              <li>Verification and execution feedback can help models
-                  improve tool invocation by predicting correct argument
-                  names and generating executable plans but can lead to
-                  worse tool selection due to wrong fixes;</li>
-            <li>While models perform comparably on tool selection
-              with JSON versus code generation, they produce more
-              overall executable plans with JSON-format generation.</li>
-            </ol>
-          </p>
+          <p>With <img src="./static/images/fig.png" style="width:1em;vertical-align:middle;" alt="Logo"> VFIG, we benchmark figure-to-SVG generation and highlight four key takeaways:</p>
+          <ol>
+            <li><b>Current VLMs struggle with faithful SVG generation.</b> Classical raster-to-vector methods achieve high pixel similarity but produce noisy primitives, while open-source VLM baselines underperform on both visual fidelity and structural correctness.</li>
+            <li><b>Coarse-to-fine curriculum SFT improves compositional stability.</b> Two-stage training produces more consistent structures and higher judge scores across different backbone models.</li>
+            <li><b>RL with visual feedback further boosts quality.</b> Reinforcement learning consistently outperforms SFT-only across all evaluation metrics.</li>
+            <li><b>Structure-aware rewards outperform pixel-level objectives.</b> Structural rewards improve judge-based scores, whereas pixel-level losses may increase SSIM but degrade structural quality.</li>
+          </ol>
         </div>
       </div>
     </div>
 
-
-    <div class="columns is-centered mt-3">
-      <div class="column is-four-fifths has-text-centered content">
-        <h2 class="title is-3">Planning Strategies</h2>
-        <p>We find that models consistently perform better on tool-F1 and pass
-          rate when instructed to perform multi-step planning
-          instead of step-by-step planning regardless of their
-          sizes.</p>
-          <div id="results-carousel" class="carousel results-carousel" >
-            <div class="box m-5 carousel-box" style="height: 360px;">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/plan_strat_tool_f1.png" width="80%"/>
-                <p>Tool-F1 of models under multi-step vs. step-by-step planning</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box" style="height: 360px;">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/plan_strat_pass_rate.png" width="80%"/>
-                <p>Pass rate of models under multi-step vs. step-by-step planning</p>
-              </div>
-            </div>
-          </div>
+    <!-- Main Results Table -->
+    <div class="columns is-centered mt-5">
+      <div class="column content" style="overflow-x:auto;">
+        <h2 class="title is-3 has-text-centered">Full Comparison Across All Models and Metrics</h2>
+        <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:center;">
+          <thead>
+            <tr>
+              <th rowspan="2" style="text-align:left; padding:10px 12px; border-bottom:2px solid #ddd; background:#fff;">Model</th>
+              <th colspan="6" style="padding:8px; border-bottom:1px solid #ddd; border-left:1px solid #eee; background:#f8f8f8; color:#333;">VFIG-BENCH</th>
+              <th colspan="6" style="padding:8px; border-bottom:1px solid #ddd; border-left:1px solid #eee; background:#f8f8f8; color:#333;">Molmo2-Diagram</th>
+              <th colspan="6" style="padding:8px; border-bottom:1px solid #ddd; border-left:1px solid #eee; background:#f8f8f8; color:#333;">SVG-Diagrams</th>
+            </tr>
+            <tr>
+              <!-- VFIG-BENCH -->
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; border-left:1px solid #eee; white-space:nowrap;">SSIM↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">LPIPS↓</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">VisualSim↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">VLM-Judge↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">Clean↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">Render↑</th>
+              <!-- Molmo2-Diagram -->
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; border-left:1px solid #eee; white-space:nowrap;">SSIM↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">LPIPS↓</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">VisualSim↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">VLM-Judge↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">Clean↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">Render↑</th>
+              <!-- SVG-Diagrams -->
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; border-left:1px solid #eee; white-space:nowrap;">SSIM↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">LPIPS↓</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">VisualSim↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">VLM-Judge↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">Clean↑</th>
+              <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">Render↑</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Classical -->
+            <tr><td colspan="19" style="text-align:left; padding:8px 12px; color:#999; font-style:italic; background:#fafafa;">Classical raster-to-vector</td></tr>
+            <tr>
+              <td style="text-align:left; padding:8px 12px;">VTracer</td>
+              <td style="border-left:1px solid #eee;">0.950</td><td>0.092</td><td>0.938</td><td>0.838</td><td>0.000</td><td>0.997</td>
+              <td style="border-left:1px solid #eee;">0.942</td><td>0.113</td><td>0.886</td><td>0.757</td><td>0.000</td><td>1.000</td>
+              <td style="border-left:1px solid #eee;">0.885</td><td>0.130</td><td>0.903</td><td>0.806</td><td>0.000</td><td>1.000</td>
+            </tr>
+            <!-- Closed-source -->
+            <tr><td colspan="19" style="text-align:left; padding:8px 12px; color:#999; font-style:italic; background:#fafafa; border-top:1px solid #eee;">Closed-source VLMs</td></tr>
+            <tr>
+              <td style="text-align:left; padding:8px 12px;">GPT-5.2</td>
+              <td style="border-left:1px solid #eee;">0.727</td><td>0.364</td><td>0.957</td><td>0.858</td><td>0.731</td><td>0.995</td>
+              <td style="border-left:1px solid #eee;">0.763</td><td>0.283</td><td>0.955</td><td>0.894</td><td>0.792</td><td>1.000</td>
+              <td style="border-left:1px solid #eee;">0.606</td><td>0.349</td><td>0.936</td><td>0.781</td><td>0.688</td><td>0.984</td>
+            </tr>
+            <tr style="background:#fefefe;">
+              <td style="text-align:left; padding:8px 12px;">Gemini-2.5-flash</td>
+              <td style="border-left:1px solid #eee;">0.772</td><td>0.258</td><td>0.964</td><td>0.913</td><td>0.788</td><td>0.990</td>
+              <td style="border-left:1px solid #eee;">0.828</td><td>0.162</td><td>0.965</td><td>0.936</td><td>0.833</td><td>0.992</td>
+              <td style="border-left:1px solid #eee;">0.672</td><td>0.245</td><td>0.950</td><td>0.893</td><td>0.680</td><td>0.991</td>
+            </tr>
+            <tr>
+              <td style="text-align:left; padding:8px 12px;">Gemini-2.5-pro</td>
+              <td style="border-left:1px solid #eee;">0.756</td><td>0.303</td><td>0.964</td><td>0.932</td><td>0.787</td><td>0.902</td>
+              <td style="border-left:1px solid #eee;">0.784</td><td>0.244</td><td>0.959</td><td>0.929</td><td>0.814</td><td>0.930</td>
+              <td style="border-left:1px solid #eee;">0.637</td><td>0.311</td><td>0.943</td><td>0.887</td><td>0.669</td><td>0.945</td>
+            </tr>
+            <!-- Open-source -->
+            <tr><td colspan="19" style="text-align:left; padding:8px 12px; color:#999; font-style:italic; background:#fafafa; border-top:1px solid #eee;">Open-source VLMs</td></tr>
+            <tr>
+              <td style="text-align:left; padding:8px 12px;">OmniSVG-4B</td>
+              <td style="border-left:1px solid #eee;">0.695</td><td>0.601</td><td>0.505</td><td>0.039</td><td>0.000</td><td>0.819</td>
+              <td style="border-left:1px solid #eee;">0.705</td><td>0.545</td><td>0.504</td><td>0.096</td><td>0.000</td><td>0.894</td>
+              <td style="border-left:1px solid #eee;">0.586</td><td>0.573</td><td>0.569</td><td>0.089</td><td>0.000</td><td>0.875</td>
+            </tr>
+            <tr style="background:#fefefe;">
+              <td style="text-align:left; padding:8px 12px;">StarVector-8B</td>
+              <td style="border-left:1px solid #eee;">0.611</td><td>0.416</td><td>0.839</td><td>0.582</td><td>0.643</td><td>0.139</td>
+              <td style="border-left:1px solid #eee;">0.496</td><td>0.467</td><td>0.809</td><td>0.591</td><td>0.728</td><td>0.146</td>
+              <td style="border-left:1px solid #eee;">0.663</td><td>0.297</td><td>0.899</td><td>0.659</td><td>0.467</td><td>0.559</td>
+            </tr>
+            <tr>
+              <td style="text-align:left; padding:8px 12px;">Qwen2.5-VL-4B</td>
+              <td style="border-left:1px solid #eee;">0.708</td><td>0.574</td><td>0.857</td><td>0.466</td><td>0.794</td><td>0.476</td>
+              <td style="border-left:1px solid #eee;">0.722</td><td>0.512</td><td>0.859</td><td>0.540</td><td>0.774</td><td>0.629</td>
+              <td style="border-left:1px solid #eee;">0.614</td><td>0.554</td><td>0.805</td><td>0.449</td><td>0.591</td><td>0.495</td>
+            </tr>
+            <!-- Ours -->
+            <tr><td colspan="19" style="text-align:left; padding:8px 12px; color:#999; font-style:italic; background:#fafafa; border-top:1px solid #eee;">Ours</td></tr>
+            <tr>
+              <td style="text-align:left; padding:8px 12px;">Ours (SFT)</td>
+              <td style="border-left:1px solid #eee;">0.763</td><td>0.264</td><td>0.951</td><td>0.781</td><td>0.784</td><td>0.884</td>
+              <td style="border-left:1px solid #eee;">0.783</td><td>0.226</td><td>0.937</td><td>0.776</td><td>0.828</td><td>0.966</td>
+              <td style="border-left:1px solid #eee;">0.633</td><td>0.311</td><td>0.907</td><td>0.653</td><td>0.710</td><td>0.939</td>
+            </tr>
+            <tr style="background:#f0faf0;">
+              <td style="text-align:left; padding:8px 12px; font-weight:700;">Ours (SFT+RL)</td>
+              <td style="border-left:1px solid #eee; font-weight:700;">0.778</td><td style="font-weight:700;">0.212</td><td style="font-weight:700;">0.957</td><td style="font-weight:700;">0.829</td><td style="font-weight:700;">0.853</td><td style="font-weight:700;">0.960</td>
+              <td style="border-left:1px solid #eee; font-weight:700;">0.800</td><td style="font-weight:700;">0.177</td><td style="font-weight:700;">0.949</td><td style="font-weight:700;">0.834</td><td style="font-weight:700;">0.855</td><td style="font-weight:700;">0.976</td>
+              <td style="border-left:1px solid #eee; font-weight:700;">0.654</td><td style="font-weight:700;">0.267</td><td style="font-weight:700;">0.919</td><td style="font-weight:700;">0.705</td><td style="font-weight:700;">0.788</td><td style="font-weight:700;">0.973</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="has-text-centered is-size-7 mt-3" style="color:#888;">
+          <b>VisualSim</b>: avg. cosine similarity of DINO, CLIP, and SigLIP embeddings.
+          &nbsp;|&nbsp; <b>VLM-Judge</b>: mean score of Gemini and GPT judges.
+          &nbsp;|&nbsp; <b>Clean</b>: SVG cleanliness.
+          &nbsp;|&nbsp; <b>Render</b>: successful rendering rate.
+        </p>
       </div>
     </div>
 
+    <!-- Comparison figures -->
     <div class="columns is-centered mt-3">
       <div class="column is-four-fifths has-text-centered content">
-        <h2 class="title is-3">Feedback</h2>
-        <p>External feedback can improve planning agents' performance on argname-F1 and pass rate at a small cost of tool-F1.</p>
-          <div id="results-carousel" class="carousel results-carousel" >
-            <div class="box m-5 carousel-box" style="height: 500px;">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/multi_json_feedback_scatter.png" width="70%"/>
-                <p>Tool-F1 and pass rate of models with or without verification and execution feedback </p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box" style="height: 500px;">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/multi_json_feedback_table.png" width="90%"/>
-                <p>Tool-F1, argname-F1, and pass rate of models under multi-step planning with various feedback</p>
-              </div>
-            </div>
-            
-          </div>
-      </div>
-    </div>
+        <h2 class="title is-3">Comparison with SOTA Methods</h2>
 
-    <div class="columns is-centered mt-3">
-      <div class="column is-four-fifths has-text-centered content">
-        <h2 class="title is-3">Plan format</h2>
-        <p>Models perform comparably on tool-F1 with JSON-
-          format and code generation but much worse on pass
-          rate with code generation.</p>
-          <div id="results-carousel" class="carousel results-carousel" >
-            <div class="box m-5 carousel-box" style="height: 360px;">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/plan_format_tool_f1.png" width="80%"/>
-                <p>Tool-F1 of models with JSON-format vs. code generation</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box" style="height: 360px;">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/plan_format_pass_rate.png" width="80%"/>
-                <p>Pass rate of models with JSON-format vs. code generation</p>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
+        <img src="./static/images/example_vfig1.png" style="width:100%; margin-bottom:0.5rem;">
+        <p class="has-text-centered">
+          <b>SVG generation examples on VFIG-Bench.</b> Given the same input raster image, we compare the rendered SVG outputs produced by different methods. Our model more faithfully preserves the structure of the input diagram. P/L/C/D denote the Gemini judge scores for presence, layout, connectivity, and details.
+        </p>
 
-    <div class="columns is-centered mt-3">
-      <div class="column is-four-fifths has-text-centered content">
-        <h2 class="title is-3">Erorr analysis</h2>
-        <p>We provide examples of common errors observed in step-by-step planning, with verification/execution feedback, and in code generation.</p>
-          <div id="results-carousel" class="carousel results-carousel" >
-            <div class="box m-5 carousel-box" style="height: 400px;">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/error1.png" width="80%"/>
-                <p>Step-by-step planning (with parsing feedback)</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box" style="height: 400px;">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/error2.png" width="80%"/>
-                <p>Multi-step planning with verification/execution feedback</p>
-              </div>
-            </div>
-            <div class="box m-5 carousel-box" style="height: 400px;">
-              <div class="content has-text-centered carousel-content">
-                <img src="static/images/error3.png" width="80%"/>
-                <p>Code generation (with parsing feedback)</p>
-              </div>
-            </div>
-          </div>
+        <img src="./static/images/example_vfig2.png" style="width:100%; margin-top:2rem; margin-bottom:0.5rem;">
+        <p class="has-text-centered">
+          <b>Additional SVG generation examples on VFIG-Bench.</b>
+        </p>
+
+        <img src="./static/images/example_vfig_bad.png" style="width:100%; margin-top:2rem; margin-bottom:0.5rem;">
+        <p class="has-text-centered">
+          <b>Failure cases of VFIG on VFIG-Bench.</b>
+        </p>
       </div>
     </div>
 
@@ -574,11 +517,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{ma2024mms,
-      title={m&m's: A Benchmark to Evaluate Tool-Use for multi-step multi-modal Tasks}, 
-      author={Zixian Ma and Weikai Huang and Jieyu Zhang and Tanmay Gupta and Ranjay Krishna},
-      year={2024},
-      journal={arXiv preprint arXiv:2403.11085},
+    <pre><code>@article{xxx,
+      title={xxx}, 
+      author={xxx},
+      year={xxx},
+      journal={xxx},
     }</code></pre>
   </div>
 </section>
