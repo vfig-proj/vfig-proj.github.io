@@ -188,15 +188,15 @@
             original geometric intent. To bridge this gap, we propose VFIG, a family of Vision&ndash;Language Models
             trained for complex and high-fidelity figure-to-SVG conversion. While this task is inherently
             data-driven, existing datasets are typically small-scale and lack the complexity of professional
-            diagrams. We address this by introducing VFIG-DATA, a large-scale dataset of 66K high-quality
+            diagrams. We address this by introducing VFIG-Data, a large-scale dataset of 66K high-quality
             figure&ndash;SVG pairs, curated from a diverse mix of real-world paper figures and procedurally
             generated diagrams. Recognizing that SVGs are composed of recurring primitives and hierarchical local
             structures, we introduce a coarse-to-fine training curriculum that begins with supervised fine-tuning
             (SFT) to learn atomic primitives and transitions to reinforcement learning (RL) refinement to optimize
             global diagram fidelity, layout consistency, and topological edge cases. Finally, we introduce
-            VFIG-BENCH, a comprehensive evaluation suite with novel metrics designed to measure the structural
+            VFIG-Bench, a comprehensive evaluation suite with novel metrics designed to measure the structural
             integrity of complex figures. VFIG achieves state-of-the-art performance among open-source models and
-            performs on par with GPT-5.2, achieving a VLM-Judge score of 0.829 on VFIG-BENCH.
+            performs on par with GPT-5.2, achieving a VLM-Judge score of 0.829 on VFIG-Bench.
           </p>
         </div>
       </div>
@@ -239,15 +239,15 @@
         <!-- <img src="static/videos/data_gen.gif"/> -->
         <div class="content has-text-justified">
           <p>
-            We curate <b>VFIG-DATA</b>, a large-scale dataset of 66K rigorously filtered image–SVG pairs. Unlike prior SVG datasets that
-            focus predominantly on icons or decorative graphics, VFIG-DATA targets diagram-centric scientific figures.
+            We curate <b>VFIG-Data</b>, a large-scale dataset of 66K rigorously filtered image–SVG pairs. Unlike prior SVG datasets that
+            focus predominantly on icons or decorative graphics, VFIG-Data targets diagram-centric scientific figures.
             <b>To our knowledge, it is the first dataset of this scale purpose-built for structured scientific figure generation.</b>
           </p>
 
           <h2 class="title is-3 has-text-centered">Dataset Examples</h2>
           <img src="./static/images/dataset_examples.png">
           <p class="has-text-centered">
-            <b>Examples of VFIG-DATA and academic data.</b> We show the three sources: simple diagrams from academic datasets, complex diagram layouts, and a curated set of basic shapes and arrows to support structured SVG generation.
+            <b>Examples of VFIG-Data and academic data.</b> We show the three sources: simple diagrams from academic datasets, complex diagram layouts, and a curated set of basic shapes and arrows to support structured SVG generation.
           </p>
 
           <h2 class="title is-3 has-text-centered">Generation Pipeline</h2>
@@ -376,12 +376,12 @@
           <thead>
             <tr>
               <th rowspan="2" style="text-align:left; padding:10px 12px; border-bottom:2px solid #ddd; background:#fff;">Model</th>
-              <th colspan="6" style="padding:8px; border-bottom:1px solid #ddd; border-left:1px solid #eee; background:#f8f8f8; color:#333;">VFIG-BENCH</th>
+              <th colspan="6" style="padding:8px; border-bottom:1px solid #ddd; border-left:1px solid #eee; background:#f8f8f8; color:#333;">VFIG-Bench</th>
               <th colspan="6" style="padding:8px; border-bottom:1px solid #ddd; border-left:1px solid #eee; background:#f8f8f8; color:#333;">Molmo2-Diagram</th>
               <th colspan="6" style="padding:8px; border-bottom:1px solid #ddd; border-left:1px solid #eee; background:#f8f8f8; color:#333;">SVG-Diagrams</th>
             </tr>
             <tr>
-              <!-- VFIG-BENCH -->
+              <!-- VFIG-Bench -->
               <th style="padding:6px 8px; border-bottom:2px solid #ddd; border-left:1px solid #eee; white-space:nowrap;">SSIM↑</th>
               <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">LPIPS↓</th>
               <th style="padding:6px 8px; border-bottom:2px solid #ddd; white-space:nowrap;">VisualSim↑</th>
