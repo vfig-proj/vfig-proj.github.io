@@ -50,6 +50,48 @@
   <script src="./data/results/model_scores.js" defer></script>
 
   <script src="./visualizer/data/data_public.js" defer></script>
+  <style>
+    .lightbox-wrap {
+      position: relative; display: inline-block; width: 100%; cursor: zoom-in;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .lightbox-wrap:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.22);
+      transform: translateY(-3px);
+    }
+    .lightbox-wrap img { border-radius: 10px; display: block; }
+    .lightbox-wrap::after {
+      content: '🔍';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5rem;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+    }
+    .lightbox-wrap:hover::after { opacity: 1; }
+    .lightbox-wrap:hover img { filter: brightness(0.88); }
+    .lightbox-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.85); z-index: 9999;
+      align-items: center; justify-content: center;
+      cursor: zoom-out;
+    }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-overlay img {
+      max-width: 92vw; max-height: 92vh;
+      border-radius: 8px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    }
+    .lightbox-close {
+      position: fixed; top: 1.2rem; right: 1.5rem;
+      color: #fff; font-size: 2rem; cursor: pointer;
+      line-height: 1; user-select: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -485,17 +527,23 @@
       <div class="column is-four-fifths has-text-centered content">
         <h2 class="title is-3">Comparison with SOTA Methods</h2>
 
-        <img src="./static/images/example_vfig1.png" style="width:100%; margin-bottom:0.5rem;">
+        <div class="lightbox-wrap" onclick="openLightbox('./static/images/example_vfig1.png')">
+          <img src="./static/images/example_vfig1.png" style="width:100%; margin-bottom:0.5rem; transition: filter 0.2s;">
+        </div>
         <p class="has-text-centered">
           <b>SVG generation examples on VFIG-Bench.</b> Given the same input raster image, we compare the rendered SVG outputs produced by different methods. Our model more faithfully preserves the structure of the input diagram. P/L/C/D denote the Gemini judge scores for presence, layout, connectivity, and details.
         </p>
 
-        <img src="./static/images/example_vfig2.png" style="width:100%; margin-top:2rem; margin-bottom:0.5rem;">
+        <div class="lightbox-wrap" style="margin-top:2rem;" onclick="openLightbox('./static/images/example_vfig2.png')">
+          <img src="./static/images/example_vfig2.png" style="width:100%; margin-bottom:0.5rem; transition: filter 0.2s;">
+        </div>
         <p class="has-text-centered">
           <b>Additional SVG generation examples on VFIG-Bench.</b>
         </p>
 
-        <img src="./static/images/example_vfig_bad.png" style="width:100%; margin-top:2rem; margin-bottom:0.5rem;">
+        <div class="lightbox-wrap" style="margin-top:2rem;" onclick="openLightbox('./static/images/example_vfig_bad.png')">
+          <img src="./static/images/example_vfig_bad.png" style="width:100%; margin-bottom:0.5rem; transition: filter 0.2s;">
+        </div>
         <p class="has-text-centered">
           <b>Failure cases of VFIG on VFIG-Bench.</b>
         </p>
@@ -550,5 +598,22 @@
   <!-- </div> -->
 </footer>
 
+  <!-- Lightbox overlay -->
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>
